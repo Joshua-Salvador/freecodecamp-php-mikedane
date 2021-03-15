@@ -62,5 +62,43 @@
     echo "$plural are blue <br>";
     echo "I love $celebrity <br>";
   ?>
+  <hr>
+  <h3>URL Parameters</h3>
+  <form action='form.php' method="get">
+    Name: <input type="text" name="name"> <br>
+    <input type="submit"><br>
+  </form>
+  <br>
+  <?php 
+    /* URL Parameters */
+   echo $_GET["name"];
+   echo $_GET['age'];
+  ?>
+  <hr>
+  <h3>POST vs GET</h3>
+  <form action="form.php" method="post">
+    Password: <input type="password" name="password"><br>
+    <input type="submit"><br>
+  </form><br>
+  <?php 
+    /* POST vs GET */
+    echo $_POST['password']
+  ?>
+  <hr>
+  <h3>Arrays</h3>
+  <?php 
+  // Arrays
+
+    $friends = array("Lance", "Enrique", "Daryll");
+    echo $friends[0];
+    echo "<br>";
+    echo $friends[1];
+    echo "<br>";
+    echo $friends[2];
+    echo "<br>";
+    
+
+  ?>
+
 </body>
 </html>

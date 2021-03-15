@@ -155,3 +155,56 @@ echo $_GET['num1'] / $_GET['num2'];
   echo "I love $celebrity <br>";
 ?>
 ```
+### URL Parameters
+>localhost:4000/form.php?name=Joshua&age=70
+
+We can still access 'age' with $_GET
+
+We can store information in URLs
+```php
+ <form action='form.php' method="get">
+    Name: <input type="text" name="name"> <br>
+    <input type="submit"><br>
+  </form>
+  <br>
+  <?php 
+   echo $_GET["name"];
+   echo $_GET['age'];
+  ?>
+```
+### POST vs GET
+**GET** always shows data in url parameters, not good for password
+
+**POST** does not show data in url parameters, secure to transfer to php server
+```php
+<h3>POST vs GET</h3>
+  <form action="form.php" method="post">
+    Password: <input type="password" name="password"><br>
+    <input type="submit"><br>
+  </form><br>
+  <?php 
+    /* POST vs GET */
+    echo $_POST['password']
+  ?>
+```
+### Arrays
+Arrays are structures where we can store multiple pieces of information.
+
+```php
+ $friends = array("Lance", "Enrique" ,"Daryll");
+  echo $friends[0];
+  echo "<br>";
+  echo $friends[1];
+  echo "<br>";
+  echo $friends[2];
+  echo "<br>";
+```
+Accessing individual elements can be accessed like in JS.
+
+PHP can store multiple types of data.
+Can replace an element with a different data type.
+```php
+ $friends[4] = "Added Element"; // can add at any index
+
+ echo count($friends); // shows how many elements
+```
